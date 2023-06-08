@@ -413,9 +413,9 @@ if sum(seismicforces)<0
         
         maxDisplacement(i)=max(dispHistFloorLeft(i,:));
         
-        delta_u=dispHistFloorLeft(i,nd);
+        delta_u=0.04*Hfloor(i);
         defBasedDI(i)=(maxDisplacement(i)-dispHistFloorLeft(i,2))/...
-                      (dispHistFloorLeft(i,2));
+                      (delta_u-dispHistFloorLeft(i,2));
         
         floorText(i,:)=strcat('Floor ',num2str(i));
         figure(1)
@@ -468,10 +468,10 @@ else
         
         maxDisplacement(i)=max(dispHistFloorRight(i,:));
     
-        delta_u=dispHistFloorRight(i,nd);
+        delta_u=0.04*Hfloor(i);
         
         defBasedDI(i)=(maxDisplacement(i)-dispHistFloorRight(i,2))/...
-                      (dispHistFloorRight(i,2));
+                      (delta_u-dispHistFloorRight(i,2));
         
         floorText(i,:)=strcat('Floor ',num2str(i));
         figure(3)

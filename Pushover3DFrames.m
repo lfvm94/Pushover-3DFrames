@@ -2,7 +2,6 @@ function [historyIncLoad,pdriftDI,driftDI,defBasedDI,maxDisplacement,...
          barPlasNode]=Pushover3DFrames(qbarz,A,Mp,E,G,Iy,Iz,J,coordxyz,...
          ni,nf,eobars,support,bc,seismicforces,Hfloor,dofForces,nbays,...
          dload,dydu,NmaxPlasteps)
-
 %------------------------------------------------------------------------
 % [historyIncLoad,pdriftDI,driftDI,defBasedDI,maxDisplacement,...
 %  barPlasNode]=Pushover3DFrames(qbarz,A,Mp,E,G,Iy,Iz,J,coordxyz,...
@@ -24,10 +23,7 @@ function [historyIncLoad,pdriftDI,driftDI,defBasedDI,maxDisplacement,...
 %               ...]                    
 %
 %         G = [g_bar;                Shear modulus of elasticity of each
-%               ...]                    
-%
-%         v = [v-bar;                Poisson modulus for each bar
-%             ...]
+%               ...]                 element   
 %
 %         Iy = [inertia_bar;         momentum of inertia for all elements'
 %                       ...]         cross-section with respect to their

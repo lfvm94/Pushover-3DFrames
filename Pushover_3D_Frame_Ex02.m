@@ -23,22 +23,22 @@ clear all
 %% Topology and node coordinates
 
 % OOPTION 2: Exported from a SAP2000 model (the SM Toolbox is required)
-APIDLLPath ='C:\Program Files\Computers and Structures\SAP2000 22\SAP2000v1.dll';
-ProgramPath ='C:\Program Files\Computers and Structures\SAP2000 22\SAP2000.exe';
+%APIDLLPath ='C:\Program Files\Computers and Structures\SAP2000 22\SAP2000v1.dll';
+%ProgramPath ='C:\Program Files\Computers and Structures\SAP2000 22\SAP2000.exe';
 
-ModelName = 'Frame_Ex01.sdb';
-ModelPath = fullfile('C:\Users\luizv\OneDrive\Pushover_3DFrames\FrameSAP2000_Ex02',ModelName);
+%ModelName = 'Frame_Ex01.sdb';
+%ModelPath = fullfile('C:\Users\luizv\OneDrive\Pushover_3DFrames\FrameSAP2000_Ex02',ModelName);
 
-[coordxyz,NiNf]=ExtractTopologySAP2000(ProgramPath,APIDLLPath,...
-                                            ModelPath);
+%[coordxyz,NiNf]=ExtractTopologySAP2000(ProgramPath,APIDLLPath,...
+%                                           ModelPath);
                                         
-coordxyz=coordxyz*2.54; % to change the location coordinates from in to cm
+%coordxyz=coordxyz*2.54; % to change the location coordinates from in to cm
 
 % OPTION 1: Coordinates and connectivity manually given
-%{
+
 NiNf=[1,2;2,3;3,4;3,5;5,6;7,8;8,9;9,10;9,11;11,12;8,2;9,3;11,5;2,13;13,14;14,3;14,15;15,5;8,16;16,17;17,9;17,18;18,11;16,13;17,14;18,15;13,19;19,20;20,14;20,21;21,15;16,22;22,23;23,17;23,24;24,18;22,19;23,20;24,21];
 coordxyz=[0,0,0;0,0,118.110236220472;137.795275590551,0,118.110236220472;137.795275590551,0,0;393.700787401575,0,118.110236220472;393.700787401575,0,0;0,157.480314960630,0;0,157.480314960630,118.110236220472;137.795275590551,157.480314960630,118.110236220472;137.795275590551,157.480314960630,0;393.700787401575,157.480314960630,118.110236220472;393.700787401575,157.480314960630,0;0,0,236.220472440945;137.795275590551,0,236.220472440945;393.700787401575,0,236.220472440945;0,157.480314960630,236.220472440945;137.795275590551,157.480314960630,236.220472440945;393.700787401575,157.480314960630,236.220472440945;0,0,354.330708661417;137.795275590551,0,354.330708661417;393.700787401575,0,354.330708661417;0,157.480314960630,354.330708661417;137.795275590551,157.480314960630,354.330708661417;393.700787401575,157.480314960630,354.330708661417]*2.54;
-%}
+
 
 nbars=39;
 
